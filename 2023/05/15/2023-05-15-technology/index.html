@@ -30,7 +30,7 @@
 <meta property="og:description" content="#权限修饰符定义：是用来控制一个成员变量能够被访问的范围的    修饰符 同一个类中 同一个包中的其他类 不同包下的子类 不同包下的无关类    private √ × × ×   空着不写 √ √ × ×   protected √ √ √ ×   public √ √ √ √   注：实际开发中，一般只用private和public  成员变量私有 方法公开  特例：如果方法中的代码是抽取其他">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-05-15T10:48:40.790Z">
-<meta property="article:modified_time" content="2023-05-15T10:48:40.791Z">
+<meta property="article:modified_time" content="2023-05-15T11:13:19.392Z">
 <meta property="article:author" content="伟大的猫猫先生">
 <meta property="article:tag" content="JAVA">
 <meta name="twitter:card" content="summary">
@@ -185,8 +185,9 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2023-05-15 18:48:40" itemprop="dateCreated datePublished" datetime="2023-05-15T18:48:40+08:00">2023-05-15</time>
+              <time title="创建时间：2023-05-15 18:48:40 / 修改时间：19:13:19" itemprop="dateCreated datePublished" datetime="2023-05-15T18:48:40+08:00">2023-05-15</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -204,7 +205,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>862</span>
+              <span>842</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -270,9 +271,7 @@
 </ul>
 <p><font color="red">特例：</font>如果方法中的代码是抽取其他方法中的共性代码，这个方法一般也私有</p>
 <hr>
-<p>#代码块</p>
-<p>###局部代码块</p>
-<ul>
+<h1 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h1><h3 id="局部代码块"><a href="#局部代码块" class="headerlink" title="局部代码块"></a>局部代码块</h3><ul>
 <li>特点：提前结束变量的生命周期，即使释放内存<pre>public class Text {
   public static void main(String[] args) {  
       {
@@ -283,8 +282,7 @@
 }
 </pre></li>
 </ul>
-<p>###构造代码块</p>
-<ul>
+<h3 id="构造代码块"><a href="#构造代码块" class="headerlink" title="构造代码块"></a>构造代码块</h3><ul>
 <li>特点：抽取构造方法中的重复代码</li>
 <li>格式：写在成员位置</li>
 <li>执行时机：再创建本类对象的时候会先执行构造代码块再执行构造方法</li>
@@ -304,25 +302,21 @@
 }
 </pre>
 
-<p>###静态代码块</p>
-<ul>
+<h3 id="静态代码块"><a href="#静态代码块" class="headerlink" title="静态代码块"></a>静态代码块</h3><ul>
 <li>特点：通过static关键字修饰，随着类的加载而加载，并且自动触发、只执行一次</li>
 <li>格式：static{}</li>
 <li>使用场景：在类加载的时候，做一些数据初始化的时候使用</li>
 </ul>
 <hr>
-<p>#抽象方法和抽象类<br>###抽象方法</p>
-<ul>
+<h1 id="抽象方法和抽象类"><a href="#抽象方法和抽象类" class="headerlink" title="抽象方法和抽象类"></a>抽象方法和抽象类</h1><h3 id="抽象方法"><a href="#抽象方法" class="headerlink" title="抽象方法"></a>抽象方法</h3><ul>
 <li>定义：将<font color="red">共性的</font>行为（<font color="red">方法</font>）抽取到父类之后。由于每一个子类执行的内容是不一样，所以，在父类中不能确定<font color="red">具体的方法体</font>。该方法就可以定义为抽象方法</li>
 <li>格式：<code>public abstract 返回值类型 方法名(参数列表);</code></li>
 </ul>
-<p>###抽象类</p>
-<ul>
+<h3 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h3><ul>
 <li>定义：如果一个<font color="red">类中存在抽象方法</font>，那么该类就<font color="red">必须声明</font>为抽象类</li>
 <li>格式：<code>public abtract class 类名&#123;&#125;</code></li>
 </ul>
-<p>###注意事项</p>
-<ul>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
 <li>抽象类不能实例化</li>
 <li>抽象类中不一定有抽象方法，有抽象方法的类一定是抽象类</li>
 <li>可以有构造方法</li>
@@ -425,6 +419,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="nav-number">1.</span> <span class="nav-text">代码块</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%80%E9%83%A8%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="nav-number">1.0.1.</span> <span class="nav-text">局部代码块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="nav-number">1.0.2.</span> <span class="nav-text">构造代码块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="nav-number">1.0.3.</span> <span class="nav-text">静态代码块</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8A%BD%E8%B1%A1%E6%96%B9%E6%B3%95%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB"><span class="nav-number">2.</span> <span class="nav-text">抽象方法和抽象类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8A%BD%E8%B1%A1%E6%96%B9%E6%B3%95"><span class="nav-number">2.0.1.</span> <span class="nav-text">抽象方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB"><span class="nav-number">2.0.2.</span> <span class="nav-text">抽象类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">2.0.3.</span> <span class="nav-text">注意事项</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
