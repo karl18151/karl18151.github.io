@@ -159,6 +159,293 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/19/2023-05-19-technolog2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="伟大的猫猫先生">
+      <meta itemprop="description" content="不要畏首畏尾！大不了就再犯下一个错误">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="风予蝉的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/05/19/2023-05-19-technolog2/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-05-19 22:57:38 / 修改时间：23:50:16" itemprop="dateCreated datePublished" datetime="2023-05-19T22:57:38+08:00">2023-05-19</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.6k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="接口与抽象类的区别"><a href="#接口与抽象类的区别" class="headerlink" title="接口与抽象类的区别"></a>接口与抽象类的区别</h2><p><font color="red">抽象类</font>着重于继承体系</p>
+<ul>
+<li>多用于父类当中，抽象共性方法</li>
+<li>表示一类事物</li>
+</ul>
+<p><font color="red">接口</font>着重于方法的解决</p>
+<ul>
+<li>是一种规则，是对行为的抽象</li>
+<li>表示一种行为</li>
+</ul>
+<h2 id="接口的定义和使用"><a href="#接口的定义和使用" class="headerlink" title="接口的定义和使用"></a>接口的定义和使用</h2><ul>
+<li>接口用关键字interface来定义<br><code>public interface 接口名 &#123;&#125;</code></li>
+<li>接口不能实例化</li>
+<li>接口和类之间是实现关系，通过implements关键字表示<br><code>public class 类名 implements 接口名 &#123;&#125;</code></li>
+<li>接口的子类（实现类）<ul>
+<li>要么重写接口中的所有抽象方法（一般用此法）</li>
+<li>要么是抽象类</li>
+</ul>
+</li>
+</ul>
+<p>ps:</p>
+<ul>
+<li>接口和类的实现关系，可以单实现，也可以多实现<br><code>public class 类名 implements 接口名1，接口名2 &#123;&#125;</code></li>
+<li>实现类还可以在继承一个类的同时实现多个接口<br><code>public class 类名 extends 父类 implements 接口名1，接口名2 &#123;&#125;</code></li>
+</ul>
+<h2 id="接口中成员的特点"><a href="#接口中成员的特点" class="headerlink" title="接口中成员的特点"></a>接口中成员的特点</h2><ul>
+<li><p>成员变量</p>
+<ul>
+<li>只能是常量</li>
+<li>默认修饰符：<code>public static final</code><ul>
+<li>IDEA（我用的是IDEA）默认添加，不写也有</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>构造方法</p>
+<ul>
+<li>没有</li>
+</ul>
+</li>
+<li><p>成员方法</p>
+<ul>
+<li>只能是<font color = "blue">抽象方法</font></li>
+<li>默认修饰符：<code>public abstract</code></li>
+</ul>
+</li>
+</ul>
+<p>ps：</p>
+<ul>
+<li>JDK7以前：接口中只能定义抽象方法</li>
+<li>JDK8的新特性：接口中可以定义有方法体的方法</li>
+<li>JDK9的新特性：接口中可以定义私有方法</li>
+</ul>
+<h2 id="接口和类之间的关系"><a href="#接口和类之间的关系" class="headerlink" title="接口和类之间的关系"></a>接口和类之间的关系</h2><ul>
+<li>类和类的关系<br>  继承关系，只能单继承，不能多继承，但是可以多层继承</li>
+<li>类和接口的关系<br>  实现关系，可以单实现，也可以多实现，还可以在继承一个类的同时实现多个接口</li>
+<li>接口和接口的关系<br>  继承关系，可以单继承，也可以多继承</li>
+</ul>
+<h2 id="版本迭代"><a href="#版本迭代" class="headerlink" title="版本迭代"></a>版本迭代</h2><h3 id="JDK8"><a href="#JDK8" class="headerlink" title="JDK8"></a>JDK8</h3><ul>
+<li><p>允许在接口中定义<font color = "blue">默认方法</font>，需要使用关键字default修饰<br>  作用：解决接口升级问题</p>
+</li>
+<li><p>接口中<font color = "blue">默认方法</font>的定义格式</p>
+<ul>
+<li>格式：<code>public default 返回值类型 方法名() &#123;&#125;</code></li>
+<li>范例：<code>public default void show() &#123;&#125;</code></li>
+</ul>
+</li>
+<li><p><font color = "blue">默认方法</font>的注意事项</p>
+<ul>
+<li>默认方法不是抽象方法，所以不强制被重写，重写的时候去掉default关键字</li>
+<li>public可以省略，delault不能省略</li>
+<li>如果实现了多个接口，多个接口中存在相同名字的默认方法，子类就必须对该方法进行重写</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+</blockquote>
+<ul>
+<li>允许在接口中定义<font color = "blue">静态方法</font>，需要用static修饰</li>
+<li>接口中<font color = "blue">静态方法</font>的定义格式：<ul>
+<li>格式：<code>public static 返回值类型 方法名() &#123;&#125;</code></li>
+<li>范例：<code>public static void show() &#123;&#125;</code></li>
+</ul>
+</li>
+<li><font color = "blue">静态方法</font>的注意事项<ul>
+<li>静态方法只能通过接口名调用，不能通过实现类名或者对象名调用</li>
+<li>public可以省略，static不能省略</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+</blockquote>
+<p>上面一大堆总结就是：<br><code>public abstract void 方法名();</code></p>
+<ol>
+<li><font color = "blue">抽象方法</font>，必须被重写<br><code>public default void 方法名() &#123;&#125;</code></li>
+<li><font color = "blue">默认方法</font>，不强制被重写<br><code>public static void 方法名() &#123;&#125;</code></li>
+<li><font color = "blue">静态方法</font>，不能被重写，通过接口名调用<br><code>private static void 方法名() &#123;&#125;</code></li>
+<li><font color = "blue">私有方法</font>，不对外开放权限，只内部使用，用来存放重复代码</li>
+</ol>
+<p>###JDK9</p>
+<ul>
+<li>允许在接口中定义<font color = "blue">私有方法</font></li>
+<li>接口中<font color = "blue">私有方法</font>的定义格式：<ul>
+<li><p>格式1：<code>private 返回值类型 方法名() &#123;&#125;</code></p>
+</li>
+<li><p>范例1：<code>privete void show() &#123;&#125;</code></p>
+</li>
+<li><p>格式2：<code>private static 返回值类型 方法名() &#123;&#125;</code></p>
+</li>
+<li><p>范例2：<code>private static void method() &#123;&#125;</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="适配器"><a href="#适配器" class="headerlink" title="适配器"></a>适配器</h2><ul>
+<li><p>当一个接口中抽象方法过多，但是我们只要使用其中一部分的时候，就可以用适配器设计模式</p>
+</li>
+<li><p>书写步骤：</p>
+<ol>
+<li>编写中间类XXXAdapter，实现对应的接口</li>
+<li>对接口中的抽象方法进行空实现</li>
+<li>让真正的实现类继承中间类，并重写需要用的方法</li>
+<li>为了避免其他类创建适配器类的对象，中间的适配器类用abstract进行修饰</li>
+</ol>
+</li>
+<li><p>小技巧：因为类只能单一继承，所以如果有多个“父类”接口，则全部给到XXXAdater去做一个中转就行了</p>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/19/2023-05-19-life/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="伟大的猫猫先生">
+      <meta itemprop="description" content="不要畏首畏尾！大不了就再犯下一个错误">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="风予蝉的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/05/19/2023-05-19-life/" class="post-title-link" itemprop="url">下次一定先建文档</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-05-19 22:50:01" itemprop="dateCreated datePublished" datetime="2023-05-19T22:50:01+08:00">2023-05-19</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>432</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>真服了，马上笔记都要做完了，电脑突然黑屏，键盘还亮着但是却只是亮着，按键失灵，重启显卡也只能听到一声“嘀~”然而也无济于事，只剩一个鼠标能在黑色的屏幕上晃来晃去。事情之突然甚至都不给我ctrl+s的机会。没办法，等了大约3分钟（我承认，我是一个没耐心的人），拍了个小视频打算待会找客服问问——这已经是这个学期第4次了吧，以前一直想着可能是因为某个进程卡住了导致这样，反正偶尔才发生。就一直没有去维修。这次一定要找售后问问，一直这样也不是办法。拍完视频，然后关机重启，果不其然，没了！我辛苦了半个小时的成果没了！！笔记干净的就好像原来什么也没有发生一样。可我已经不想再打第二遍了啊！！！烦死了</p>
+<hr>
+<p>哈哈哈哈哈，打标题的时候突然想到一个梗，瞬间就不难过了</p>
+<blockquote>
+<p>GTA6，每隔一段时间就会被爆出来说“在做了在做了”，可是多少年了甚至连一张照片都没爆出来。于是每当有GTA6在做的谣言爆出来时，下面网友就会评论“在做了&#x3D;文件夹已经建好了”</p>
+</blockquote>
+<p>哈哈哈，看来这方面我还得像R星学习啊</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/19/2023-05-19-technolog/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1089,203 +1376,11 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/09/firstText/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="伟大的猫猫先生">
-      <meta itemprop="description" content="不要畏首畏尾！大不了就再犯下一个错误">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="风予蝉的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/05/09/firstText/" class="post-title-link" itemprop="url">FIRST TEXT</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-05-09 00:10:09" itemprop="dateCreated datePublished" datetime="2023-05-09T00:10:09+08:00">2023-05-09</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-05-10 12:39:46" itemprop="dateModified" datetime="2023-05-10T12:39:46+08:00">2023-05-10</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%B5%8B%E8%AF%95/" itemprop="url" rel="index"><span itemprop="name">测试</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>431</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>#一级标题<br>##二级标题 自带下划线<br>###三级标题<br>####四级标题<br>#####五级标题</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/05/09/firstText/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/08/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="伟大的猫猫先生">
-      <meta itemprop="description" content="不要畏首畏尾！大不了就再犯下一个错误">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="风予蝉的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/05/08/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-05-08 18:28:15" itemprop="dateCreated datePublished" datetime="2023-05-08T18:28:15+08:00">2023-05-08</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-05-10 12:29:39" itemprop="dateModified" datetime="2023-05-10T12:29:39+08:00">2023-05-10</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%B5%8B%E8%AF%95/" itemprop="url" rel="index"><span itemprop="name">测试</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>367</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
 
 
 
@@ -1350,7 +1445,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1399,12 +1494,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">7k</span>
+    <span title="站点总字数">10k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">7 分钟</span>
+    <span title="站点阅读时长">9 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
