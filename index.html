@@ -159,6 +159,203 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/19/2023-05-19-technolog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="伟大的猫猫先生">
+      <meta itemprop="description" content="不要畏首畏尾！大不了就再犯下一个错误">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="风予蝉的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/05/19/2023-05-19-technolog/" class="post-title-link" itemprop="url">比特币地址类型</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-05-19 21:20:35" itemprop="dateCreated datePublished" datetime="2023-05-19T21:20:35+08:00">2023-05-19</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="旧地址（P2PKH）"><a href="#旧地址（P2PKH）" class="headerlink" title="旧地址（P2PKH）"></a>旧地址（P2PKH）</h2><p>遗留地址，或支付到公钥哈希，是最常见的版本。 由于它们<font color="red">以 1 开头</font>，我们可以区分它们。</p>
+<p>1ae23hGo6CShLgbBeu2c2ZlR2C7BLe6Mcr</p>
+<p>P2PKH 地址只是来自私钥的公钥的散列。</p>
+<p>当比特币在 2009 年发布时，它和 P2PK 是唯一的比特币地址类型。 目前，它是占用空间最多的地址类型，这意味着它是发送和接收最昂贵的地址。</p>
+<p>尽管如此，目前还没有充分的理由使用这种类型，因为有很多新版本在很多方面都更好。</p>
+<h2 id="支付脚本哈希（P2SH）"><a href="#支付脚本哈希（P2SH）" class="headerlink" title="支付脚本哈希（P2SH）"></a>支付脚本哈希（P2SH）</h2><p>Pay to Script Hash 或 P2SH 地址是<font color="red">以 3 开头</font>的地址。</p>
+<p>34PHRaufoUqG9VmmMStrM2QSsvdxYoPq4M</p>
+<p>与列表中的第一个不同，这些不使用公钥的哈希值，而是一个涉及某些条件的脚本，以便可以使用资金。 优点是它可以隐藏发行者的公钥。</p>
+<p>这些消费条件可以很简单（比如证明你拥有公钥），也可以很复杂（只有拥有公钥的人才能在经过一定时间后才可以消费比特币）。</p>
+<p>当使用这个比特币脚本时，P2SH 类型的地址可以利用 SegWit 并节省交易费用。</p>
+<p>这样的好处之一是它们比传统地址便宜约 26%。</p>
+<h2 id="隔离见证原生（P2WPKH）"><a href="#隔离见证原生（P2WPKH）" class="headerlink" title="隔离见证原生（P2WPKH）"></a>隔离见证原生（P2WPKH）</h2><p>SegWit 的原生地址 P2WPKH 是<font color="red">以 bc1q 开头</font>的地址。</p>
+<p>bc1q35lhb53elrn0amo8s6s3j2n493ty9jax448plo</p>
+<p>这种类型的地址通过将签名和脚本保留在交易之外，将它们存储在令牌中，比以前的地址减少了交易中存储的信息量。 因此它的名字隔离见证。</p>
+<p>有了这些地址，与 P2SH 相比，我们可以额外节省 16%，与 P2PKH 相比，节省 38%。 因此，近年来它的受欢迎程度大大增加。</p>
+<p>一些交易所可能还不支持此处使用的 Bech32 格式，这就是它们提供发送 P2SH 功能的原因。 这是大多数钱包仍然继续支持旧格式的原因之一，即使是像 P2PKH 这样过时的格式。</p>
+<h2 id="Taproot（P2TR）"><a href="#Taproot（P2TR）" class="headerlink" title="Taproot（P2TR）"></a>Taproot（P2TR）</h2><p>Taproot 地址是<font color="red">以 bc1p 开头</font>的地址。</p>
+<p>bc1pnffryyndurmk5yh38ykl5xcr4g3ev6c0ltc31g</p>
+<p>Taproot地址仍然很新，因为直到 2021 年 11 月才进行了实施所需的软分叉。</p>
+<p>这些允许使用比特币地址制作某些类型的智能合约，并在交易中使用它们时提高隐私性。</p>
+<p>使用 taproot 实现的常规交易比 SegWit 稍大，但比我们在这里看到的前 2 个版本要小。</p>
+<p>这是因为它们与公钥而不是公钥哈希绑定。 然而，当涉及到更复杂的交易时，例如涉及多个签名的交易，Taproot地址有助于节省大量空间并变得非常便宜。</p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>……</p>
+<h2 id="完整表格"><a href="#完整表格" class="headerlink" title="完整表格"></a>完整表格</h2><table>
+<thead>
+<tr>
+<th align="center">地址类型</th>
+<th align="center">首字母</th>
+<th align="center">例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">公钥哈希(P2PKH)</td>
+<td align="center">1</td>
+<td align="center">17VZNX1SN5NtKa8UQFxwQbFeFc3iqRYhem</td>
+</tr>
+<tr>
+<td align="center">脚本哈希(P2SH)</td>
+<td align="center">3</td>
+<td align="center">3EktnHQD7RiAE6uzMj2ZifT9YgRrkSgzQX</td>
+</tr>
+<tr>
+<td align="center">隔离见证主网(P2WPKH)</td>
+<td align="center">bc1q</td>
+<td align="center">bc1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4</td>
+</tr>
+<tr>
+<td align="center">隔离见证测试网(P2WPKH)</td>
+<td align="center">待定</td>
+<td align="center">tb1qw508d6qejxtdg4y5r3zarvary0c5xw7kxpjzsx</td>
+</tr>
+<tr>
+<td align="center">隔离见证主网(P2WSH)</td>
+<td align="center">bc1q</td>
+<td align="center">bc1qrp33g0q5c5txsp9arysrx4k6zdkfs4nce4xj0gdcccefvpysxf3qccfmv3</td>
+</tr>
+<tr>
+<td align="center">隔离见证测试网(P2WSH)</td>
+<td align="center">待定</td>
+<td align="center">tb1qrp33g0q5c5txsp9arysrx4k6zdkfs4nce4xj0gdcccefvpysxf3q0sl5k7</td>
+</tr>
+<tr>
+<td align="center">私钥(WIF，未压缩的公钥)</td>
+<td align="center">5</td>
+<td align="center">5Hwgr3u458GLafKBgxtssHSPqJnYoGrSzgQsPwLFhLNYskDPyyA</td>
+</tr>
+<tr>
+<td align="center">私钥(WIF，压缩公钥)</td>
+<td align="center">科尔</td>
+<td align="center">L1aW4aubDFB7yfras2S1mN3bqg9nwySY8nkoLmJebSLD5BWv3ENZ</td>
+</tr>
+<tr>
+<td align="center">BIP32 公钥</td>
+<td align="center">xpub</td>
+<td align="center">xpub661MyMwAqRbcEYS8w7XLSVeEsBXy79zSzH1J8vCdxAZningWLdN3zgtU6LBpB85b3D2yc8sfvZU521AAwdZafEz7mnzBBsz4wKY5e4cp9LB</td>
+</tr>
+<tr>
+<td align="center">bip32 私钥</td>
+<td align="center">xprv</td>
+<td align="center">xprv9s21ZrQH143K24Mfq5zL5MhWK9hUhhGbd45hLXo2Pq2oqzMMo63oStZzF93Y5wvzdUayhgkkFoicQZcP3y52uPPxFnfoLZB21Teqt1VvEHx</td>
+</tr>
+<tr>
+<td align="center">测试网公钥哈希</td>
+<td align="center">?</td>
+<td align="center">mipcBbFg9gMiCh81Kj8tqqdgoZub1ZJRfn</td>
+</tr>
+<tr>
+<td align="center">测试网哈希脚本</td>
+<td align="center">2</td>
+<td align="center">2MzQwSSnBHWHqSAqtTVQ6v47XtaisrJa1Vc</td>
+</tr>
+<tr>
+<td align="center">私钥(WIF，未压缩的公钥)</td>
+<td align="center">9</td>
+<td align="center">92Pg46rUhgTT7romnV7iGW6W1gbGdeezqdbJCzShkCsYNzyyNcc</td>
+</tr>
+<tr>
+<td align="center">测试网私钥(WIF，未压缩的公钥)</td>
+<td align="center">c</td>
+<td align="center">cNJFgo1driFnPcBdBX8BrJrpxchBWXwXCvNH5SoSkdcF6JXXwHMm</td>
+</tr>
+<tr>
+<td align="center">测试网 BIP32 公钥</td>
+<td align="center">?</td>
+<td align="center">tpubD6NzVbkrYhZ4WLczPJWReQycCJdd6YVWXubbVUFnJ5KgU5MDQrD998ZJLNGbhd2pq7ZtDiPYTfJ7iBenLVQpYgSQqPjUsQeJXH8VQ8xA67D</td>
+</tr>
+<tr>
+<td align="center">测试网 bip32 私钥</td>
+<td align="center">tpvr</td>
+<td align="center">tprv8ZgxMBicQKsPcsbCVeqqF1KVdH7gwDJbxbzpCxDUsoXHdb6SnTPYxdwSAKDC6KKJzv7khnNWRAJQsRA8BBQyiSfYnRt6zuu4vZQGKjeW4YF</td>
+</tr>
+<tr>
+<td align="center">Taproot(P2TR)</td>
+<td align="center">bc1p</td>
+<td align="center">bc1pnffryyndurmk5yh38ykl5xcr4g3ev6c0ltc31g</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/16/2023-05-16-life(2)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1153,7 +1350,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1202,12 +1399,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">5k</span>
+    <span title="站点总字数">7k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">5 分钟</span>
+    <span title="站点阅读时长">7 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
