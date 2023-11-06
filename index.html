@@ -205,13 +205,13 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>1.4k</span>
+              <span>1.9k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -228,18 +228,67 @@
 </code></pre>
 <p>每个参数（红色、绿色和蓝色）都定义颜色的强度，其值介于0和255之间。</p>
 <p>这意味着有256 x 256 x 256&#x3D;16777216种可能的颜色。</p>
-<script>  
-function changeRGB() {  
-  var red = document.getElementById("slideRed").value;  
-  var green = document.getElementById("slideGreen").value;  
-  var blue = document.getElementById("slideBlue").value;  
+<script>
+  // 获取RGB滑块元素
+  var slideRed = document.getElementById('slideRed');
+  var slideGreen = document.getElementById('slideGreen');
+  var slideBlue = document.getElementById('slideBlue');
+  
+  // 获取RGBA滑块元素
+  var slideRedA = document.getElementById('slideRedA');
+  var slideGreenA = document.getElementById('slideGreenA');
+  var slideBlueA = document.getElementById('slideBlueA');
+  var slideAlphaA = document.getElementById('slideAlphaA');
+  
+  // 获取颜色显示元素
+  var rgbResult = document.getElementById('rgbresult');
+  var rgbaResult = document.getElementById('rgbaresult');
+  var rgbResultText = document.getElementById('rgbresulttext');
+  var rgbaResultText = document.getElementById('rgbaresulttext');
+  
+  // 添加事件监听器来处理RGB滑块值的变化
+  function changeRGB() {
+    var red = slideRed.value;
+    var green = slideGreen.value;
+    var blue = slideBlue.value;
     
-  document.getElementById("rgbresult").style.backgroundColor = "rgb(" + red + ", " + green + ", " + blue + ")";  
-  document.getElementById("valRed2").innerText = red;  
-  document.getElementById("valGreen2").innerText = green;  
-  document.getElementById("valBlue2").innerText = blue;  
-}  
+    var rgbColor = 'rgb(' + red + ', ' + green + ', ' + blue + ')';
+    
+    // 更新RGB颜色的背景颜色和文本内容
+    rgbResult.style.backgroundColor = rgbColor;
+    rgbResultText.textContent = rgbColor;
+  }
+  
+  // 添加事件监听器来处理RGBA滑块值的变化
+  function changeRGBA() {
+    var red = slideRedA.value;
+    var green = slideGreenA.value;
+    var blue = slideBlueA.value;
+    var alpha = slideAlphaA.value / 10; // 将0-10的值转换为0-1
+    
+    var rgbaColor = 'rgba(' + red + ', ' + green + ', ' + blue + ', ' + alpha + ')';
+    
+    // 更新RGBA颜色的背景颜色和文本内容
+    rgbaResult.style.backgroundColor = rgbaColor;
+    rgbaResultText.textContent = rgbaColor;
+  }
+  
+  // 初始化时触发一次RGB和RGBA颜色更改
+  changeRGB();
+  changeRGBA();
+  
+  // 添加事件监听器以处理RGB滑块值的变化
+  slideRed.addEventListener('input', changeRGB);
+  slideGreen.addEventListener('input', changeRGB);
+  slideBlue.addEventListener('input', changeRGB);
+  
+  // 添加事件监听器以处理RGBA滑块值的变化
+  slideRedA.addEventListener('input', changeRGBA);
+  slideGreenA.addEventListener('input', changeRGBA);
+  slideBlueA.addEventListener('input', changeRGBA);
+  slideAlphaA.addEventListener('input', changeRGBA);
 </script>
+
 
 
 <div class="w3-container xw3-light-grey">
@@ -276,37 +325,6 @@ function changeRGB() {
 <pre><code>rgba(red, green, blue, alpha)
 </code></pre>
 <p>alpha 参数是介于0.0（完全透明）和1.0（完全不透明）之间的数字</p>
-<script>
-  // 获取滑块元素
-  var slideRedA = document.getElementById('slideRedA');
-  var slideGreenA = document.getElementById('slideGreenA');
-  var slideBlueA = document.getElementById('slideBlueA');
-  var slideAlphaA = document.getElementById('slideAlphaA');
-  
-  // 获取颜色显示元素
-  var rgbaResult = document.getElementById('rgbaresult');
-  var rgbaResultText = document.getElementById('rgbaresulttext');
-  
-  // 添加事件监听器来处理滑块值的变化
-  function changeRGBA() {
-    var red = slideRedA.value;
-    var green = slideGreenA.value;
-    var blue = slideBlueA.value;
-    var alpha = slideAlphaA.value / 10; // 将0-10的值转换为0-1
-    
-    var rgbaColor = 'rgba(' + red + ', ' + green + ', ' + blue + ', ' + alpha + ')';
-    
-    // 更新背景颜色和文本内容
-    rgbaResult.style.backgroundColor = rgbaColor;
-    rgbaResultText.textContent = rgbaColor;
-  }
-  
-  // 初始化时触发一次
-  changeRGBA();
-</script>
-
-
-
 <div class="w3-container xw3-light-grey">
   <div class="w3-row w3-container">
     <div class="w3-col m2 w3-container w3-center">
