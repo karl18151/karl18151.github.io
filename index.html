@@ -205,7 +205,7 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>780</span>
+              <span>1.4k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -276,39 +276,35 @@ function changeRGB() {
 <pre><code>rgba(red, green, blue, alpha)
 </code></pre>
 <p>alpha 参数是介于0.0（完全透明）和1.0（完全不透明）之间的数字</p>
-<div class="w3-container xw3-light-grey">  
-  <div class="w3-row w3-container">  
-    <div class="w3-col m2 w3-container w3-center">  
-    </div>  
-    <div class="w3-col m8 w3-container w3-center">  
-      <div id="rgbaresult" style="line-height: 80px; background-color: rgba(255, 99, 71, 0.5); --darkreader-inline-bgcolor: rgba(161, 25, 0, 0.5);" data-darkreader-inline-bgcolor=""><p id="rgbaresulttext" style="font-size: 120%; font-weight: bold; font-family: Consolas, &quot;Courier New&quot;, Courier, monospace; color: rgb(255, 255, 255); --darkreader-inline-color: #e8e6e3;" data-darkreader-inline-color="">rgba(255, 99, 71, 0.5)</p></div>  
-    </div>  
-    <div class="w3-col m2 w3-container w3-center">  
-    </div>  
-  </div>  
-  <div class="w3-row w3-container">  
-    <div class="w3-col m3 w3-container w3-center">  
-      <p>RED</p>  
-      <input onchange="changeRGBA()" oninput="changeRGBA()" type="range" id="slideRedA" name="slideRedA" value="255" min="0" max="255">  
-      <div id="valRed2A" xstyle="background-color:red;border-radius:5px;color:white;opacity:0.8">255</div>  
-    </div>  
-    <div class="w3-col m3 w3-container w3-center">  
-      <p>GREEN</p>  
-      <input onchange="changeRGBA()" oninput="changeRGBA()" type="range" id="slideGreenA" name="slideGreenA" value="99" min="0" max="255">  
-      <div id="valGreen2A" xstyle="background-color:#00ff00;border-radius:5px;opacity:0.8">99</div>  
-    </div>  
-    <div class="w3-col m3 w3-container w3-center">  
-      <p>BLUE</p>  
-      <input onchange="changeRGBA()" oninput="changeRGBA()" type="range" id="slideBlueA" name="slideBlueA" value="71" min="0" max="255">  
-      <div id="valBlue2A" xstyle="background-color:blue;border-radius:5px;color:white;opacity:0.8">71</div>  
-    </div>  
-    <div class="w3-col m3 w3-container w3-center">  
-      <p>ALPHA</p>  
-      <input onchange="changeRGBA()" oninput="changeRGBA()" type="range" id="slideAlphaA" name="slideAlphaA" value="5" min="0" max="10">  
-      <div id="valAlpha2A" xstyle="background-color:blue;border-radius:5px;color:white;opacity:0.8">5</div>  
-    </div>  
-  </div>  
-</div>
+<script>
+  // 获取滑块元素
+  var slideRedA = document.getElementById('slideRedA');
+  var slideGreenA = document.getElementById('slideGreenA');
+  var slideBlueA = document.getElementById('slideBlueA');
+  var slideAlphaA = document.getElementById('slideAlphaA');
+  
+  // 获取颜色显示元素
+  var rgbaResult = document.getElementById('rgbaresult');
+  var rgbaResultText = document.getElementById('rgbaresulttext');
+  
+  // 添加事件监听器来处理滑块值的变化
+  function changeRGBA() {
+    var red = slideRedA.value;
+    var green = slideGreenA.value;
+    var blue = slideBlueA.value;
+    var alpha = slideAlphaA.value / 10; // 将0-10的值转换为0-1
+    
+    var rgbaColor = 'rgba(' + red + ', ' + green + ', ' + blue + ', ' + alpha + ')';
+    
+    // 更新背景颜色和文本内容
+    rgbaResult.style.backgroundColor = rgbaColor;
+    rgbaResultText.textContent = rgbaColor;
+  }
+  
+  // 初始化时触发一次
+  changeRGBA();
+</script>
+
 
 
 <div class="w3-container xw3-light-grey">
@@ -1217,12 +1213,12 @@ function changeRGB() {
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">32k</span>
+    <span title="站点总字数">33k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">29 分钟</span>
+    <span title="站点阅读时长">30 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
