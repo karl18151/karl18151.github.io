@@ -228,69 +228,45 @@
 </code></pre>
 <p>每个参数（红色、绿色和蓝色）都定义颜色的强度，其值介于0和255之间。</p>
 <p>这意味着有256 x 256 x 256&#x3D;16777216种可能的颜色。</p>
-<script>
- 
-  var slideRed = document.getElementById('slideRed');
-  var slideGreen = document.getElementById('slideGreen');
-  var slideBlue = document.getElementById('slideBlue');
-  
- 
-  var slideRedA = document.getElementById('slideRedA');
-  var slideGreenA = document.getElementById('slideGreenA');
-  var slideBlueA = document.getElementById('slideBlueA');
-  var slideAlphaA = document.getElementById('slideAlphaA');
-  
+  <script>
+    function changeRGB() {
+      const red = document.getElementById("slideRed").value;
+      const green = document.getElementById("slideGreen").value;
+      const blue = document.getElementById("slideBlue").value;
 
-  var rgbResult = document.getElementById('rgbresult');
-  var rgbResultText = document.getElementById('rgbresulttext');
-  
+      const rgbResult = document.getElementById("rgbresult");
+      const rgbResultText = document.getElementById("rgbresulttext");
 
-  var rgbaResult = document.getElementById('rgbaresult');
-  var rgbaResultText = document.getElementById('rgbaresulttext');
-  
- 
-  function changeRGB() {
-    var red = slideRed.value;
-    var green = slideGreen.value;
-    var blue = slideBlue.value;
-    
-    var rgbColor = 'rgb(' + red + ', ' + green + ', ' + blue + ')';
-    
- 
-    rgbResult.style.backgroundColor = rgbColor;
-    rgbResultText.textContent = rgbColor;
-  }
-  
+      rgbResult.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+      rgbResultText.textContent = `rgb(${red}, ${green}, ${blue})`;
 
-  function changeRGBA() {
-    var red = slideRedA.value;
-    var green = slideGreenA.value;
-    var blue = slideBlueA.value;
-    var alpha = slideAlphaA.value / 10; 
-    
-    var rgbaColor = 'rgba(' + red + ', ' + green + ', ' + blue + ', ' + alpha + ')';
-    
-  
-    rgbaResult.style.backgroundColor = rgbaColor;
-    rgbaResultText.textContent = rgbaColor;
-  }
-  
-  
-  changeRGB();
-  changeRGBA();
+      // You can also update the RGBA color block if needed
+      updateRGBA(red, green, blue);
+    }
 
-  slideRed.addEventListener('input', changeRGB);
-  slideGreen.addEventListener('input', changeRGB);
-  slideBlue.addEventListener('input', changeRGB);
-  
+    function changeRGBA() {
+      const red = document.getElementById("slideRedA").value;
+      const green = document.getElementById("slideGreenA").value;
+      const blue = document.getElementById("slideBlueA").value;
+      const alpha = document.getElementById("slideAlphaA").value / 10; // Convert alpha to a decimal value
 
-  slideRedA.addEventListener('input', changeRGBA);
-  slideGreenA.addEventListener('input', changeRGBA);
-  slideBlueA.addEventListener('input', changeRGBA);
-  slideAlphaA.addEventListener('input', changeRGBA);
-</script>
+      const rgbaResult = document.getElementById("rgbaresult");
+      const rgbaResultText = document.getElementById("rgbaresulttext");
 
+      rgbaResult.style.backgroundColor = `rgba(${red}, ${green}, ${blue}, ${alpha})`;
+      rgbaResultText.textContent = `rgba(${red}, ${green}, ${blue}, ${alpha})`;
+    }
 
+    function updateRGBA(red, green, blue) {
+      const alpha = document.getElementById("slideAlphaA").value / 10; // Convert alpha to a decimal value
+
+      const rgbaResult = document.getElementById("rgbaresult");
+      const rgbaResultText = document.getElementById("rgbaresulttext");
+
+      rgbaResult.style.backgroundColor = `rgba(${red}, ${green}, ${blue}, ${alpha})`;
+      rgbaResultText.textContent = `rgba(${red}, ${green}, ${blue}, ${alpha})`;
+    }
+  </script>
 
 
 <div class="w3-container xw3-light-grey">
