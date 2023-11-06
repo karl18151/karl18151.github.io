@@ -226,8 +226,8 @@
           <h3 id="RGB颜色"><a href="#RGB颜色" class="headerlink" title="RGB颜色"></a>RGB颜色</h3><p>在 HTML 中，可以使用以下公式将颜色指定为 RGB 值：</p>
 <pre><code>rgb(red, green, blue)
 </code></pre>
-<p>每个参数（红色、绿色和蓝色）都定义颜色的强度，其值介于0和255之间。</p>
-<p>这意味着有256 x 256 x 256&#x3D;16777216种可能的颜色。</p>
+<p>每个参数（红色、绿色和蓝色）都定义为颜色的强度，其值介于0 - 255之间</p>
+<p>于是一共有256 x 256 x 256&#x3D;16777216种可能的颜色。</p>
   <script>
     function changeRGB() {
       const red = document.getElementById("slideRed").value;
@@ -236,47 +236,47 @@
 
       const rgbResult = document.getElementById("rgbresult");
       const rgbResultText = document.getElementById("rgbresulttext");
-
+    
       rgbResult.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
       rgbResultText.textContent = `rgb(${red}, ${green}, ${blue})`;
-
+    
       // You can also update the RGBA color block if needed
       updateRGBA(red, green, blue);
-
+    
       // Update the numeric value below the slider
       document.getElementById("valRed2").textContent = red;
       document.getElementById("valGreen2").textContent = green;
       document.getElementById("valBlue2").textContent = blue;	
     }
-
+    
     function changeRGBA() {
       const red = document.getElementById("slideRedA").value;
       const green = document.getElementById("slideGreenA").value;
       const blue = document.getElementById("slideBlueA").value;
       const alpha = document.getElementById("slideAlphaA").value / 10; // Convert alpha to a decimal value
-
+    
       const rgbaResult = document.getElementById("rgbaresult");
       const rgbaResultText = document.getElementById("rgbaresulttext");
-
+    
       rgbaResult.style.backgroundColor = `rgba(${red}, ${green}, ${blue}, ${alpha})`;
       rgbaResultText.textContent = `rgba(${red}, ${green}, ${blue}, ${alpha})`;
-
+    
       // Update the numeric value below the slider
       document.getElementById("valRed2A").textContent = red;
       document.getElementById("valGreen2A").textContent = green;
       document.getElementById("valBlue2A").textContent = blue;
       document.getElementById("valAlpha2A").textContent = alpha;
     }
-
+    
     function updateRGBA(red, green, blue) {
       const alpha = document.getElementById("slideAlphaA").value / 10; // Convert alpha to a decimal value
-
+    
       const rgbaResult = document.getElementById("rgbaresult");
       const rgbaResultText = document.getElementById("rgbaresulttext");
-
+    
       rgbaResult.style.backgroundColor = `rgba(${red}, ${green}, ${blue}, ${alpha})`;
       rgbaResultText.textContent = `rgba(${red}, ${green}, ${blue}, ${alpha})`;
-
+    
        // Update the numeric value below the slider
       document.getElementById("valRed2A").textContent = red;
       document.getElementById("valGreen2A").textContent = green;
@@ -314,7 +314,7 @@
   </div>
 </div>
 
-<h3 id="RGBA颜色"><a href="#RGBA颜色" class="headerlink" title="RGBA颜色"></a>RGBA颜色</h3><p>RGBA 颜色值是带有 Alpha 通道的 RGB 颜色值的扩展-指定颜色的不透明度</p>
+<h3 id="RGBA颜色"><a href="#RGBA颜色" class="headerlink" title="RGBA颜色"></a>RGBA颜色</h3><p>RGBA 颜色值是带有 Alpha 通道的 RGB 颜色值的扩展（增加了一个参数用来指定颜色的不透明度）</p>
 <p>RGBA 颜色值指定为：</p>
 <pre><code>rgba(red, green, blue, alpha)
 </code></pre>
