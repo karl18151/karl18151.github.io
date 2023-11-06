@@ -207,7 +207,7 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>1.7k</span>
+              <span>2.4k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -244,6 +244,11 @@
 
       // You can also update the RGBA color block if needed
       updateRGBA(red, green, blue);
+
+      // Update the numeric value below the slider
+      document.getElementById("valRed2").textContent = red;
+      document.getElementById("valGreen2").textContent = green;
+      document.getElementById("valBlue2").textContent = blue;	
     }
 
     function changeRGBA() {
@@ -257,6 +262,12 @@
 
       rgbaResult.style.backgroundColor = `rgba(${red}, ${green}, ${blue}, ${alpha})`;
       rgbaResultText.textContent = `rgba(${red}, ${green}, ${blue}, ${alpha})`;
+
+      // Update the numeric value below the slider
+      document.getElementById("valRed2A").textContent = red;
+      document.getElementById("valGreen2A").textContent = green;
+      document.getElementById("valBlue2A").textContent = blue;
+      document.getElementById("valAlpha2A").textContent = alpha;
     }
 
     function updateRGBA(red, green, blue) {
@@ -267,6 +278,11 @@
 
       rgbaResult.style.backgroundColor = `rgba(${red}, ${green}, ${blue}, ${alpha})`;
       rgbaResultText.textContent = `rgba(${red}, ${green}, ${blue}, ${alpha})`;
+
+       // Update the numeric value below the slider
+      document.getElementById("valRed2A").textContent = red;
+      document.getElementById("valGreen2A").textContent = green;
+      document.getElementById("valBlue2A").textContent = blue;
     }
   </script>
 
@@ -501,12 +517,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">33k</span>
+    <span title="站点总字数">34k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">30 分钟</span>
+    <span title="站点阅读时长">31 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
