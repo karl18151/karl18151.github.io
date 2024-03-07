@@ -457,6 +457,16 @@ var _hmt = _hmt || [];
   
 
   
+  [%- if theme.cursor_effect %]
+  [%- if theme.cursor_effect.type == "explosion" %]
+    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
+    <script src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+    <script src="/js/cursor/explosion.min.js"></script>
+  [%- elseif theme.cursor_effect.type == "cherry" %]
+    <script src="/js/cursor/cherry.js"></script>
+  [%- endif %]
+[%- endif %]
+  
   <script src="https://myhkw.cn/api/player/169476436377" id="myhk" key="169476436377" m="1"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
