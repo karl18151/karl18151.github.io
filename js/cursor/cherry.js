@@ -68,33 +68,31 @@
     };
 	
 	
-     this.init = function(x, y, color) {
-    this.velocity = {
-      x:  (Math.random() < 0.5 ? -1 : 1) * (Math.random() / 2),
-      y: 1
+    this.init = function(x, y, color) {
+      this.velocity = {
+        x:  (Math.random() < 0.5 ? -1 : 1) * (Math.random() / 2),
+        y: 1
+      };
+      this.position = {x: x - 10, y: y - 20};
+      this.initialStyles.color = color;
+      console.log(color);
+
+      this.element = document.createElement('span');
+      this.element.innerHTML = this.character;
+      applyProperties(this.element, this.initialStyles);
+      this.update();
+      
+      document.body.appendChild(this.element);
     };
-    this.position = {x: x - 10, y: y - 20};
-    this.initialStyles.color = color;
-    this.initialStyles.boxShadow = "0 0 10px 5px " + color; // ���ӷ���Ч��
-    console.log(color);
-
-    this.element = document.createElement('span');
-    this.element.innerHTML = this.character;
-    applyProperties(this.element, this.initialStyles);
-    this.update();
-
-    document.body.appendChild(this.element);
-  };
-
-  this.update = function() {
-    this.position.x += this.velocity.x;
-    this.position.y += this.velocity.y;
-    this.lifeSpan--;
-    this.element.style.transform = "translate3d(" + this.position.x + "px," + this.position.y + "px,0) scale(" + (this.lifeSpan / 120) + ")";
-  }
-
-  this.die = function() {
-    this.element.parentNode.removeChild(this.element);
+    this.update = function() {
+      this.position.x += this.velocity.x;
+      this.position.y += this.velocity.y;
+      this.lifeSpan--;
+      this.element.style.transform = "translate3d(" + this.position.x + "px," + this.position.y + "px,0) scale(" + (this.lifeSpan / 120) + ")";
+    }
+    this.die = function() {
+      this.element.parentNode.removeChild(this.element);
+    }
   }
   
   
