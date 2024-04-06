@@ -4,14 +4,16 @@
  document.addEventListener('visibilitychange', function () {
      if (document.hidden) {
          $('[rel="icon"]').attr('href', "/img/trhx2.png");
-         document.title = '�c(��-`����-)���������ߣ�';
+         document.title = '�������ߣ�';
          clearTimeout(titleTime);
      }
      else {
          $('[rel="icon"]').attr('href', "/img/trhx2.png");
-         document.title = '�d(???3)����˧�ͻ�����' + OriginTitle;
+         document.title = '��˧�ͻ�����' + OriginTitle;
          titleTime = setTimeout(function () {
              document.title = OriginTitle;
          }, 2000);
      }
  });
+ 
+ 
