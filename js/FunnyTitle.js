@@ -7,7 +7,7 @@
          clearTimeout(titleTime);
      }
      else {
-         document.title = '靓仔，你终于回来了！！' + OriginTitle;
+         document.title = '靓仔，奴奴想死你了！' + OriginTitle;
          titleTime = setTimeout(function () {
              document.title = OriginTitle;
          }, 2000);
