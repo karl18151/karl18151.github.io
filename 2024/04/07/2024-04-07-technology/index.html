@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#333">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/karl18151/Blog-img@main/20240203/MY_LOGO---副本.6ypbqd0ktog0.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/karl18151/Blog-img@main/20240203/MY_LOGO---副本.6ypbqd0ktog0.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#333">
+  <link rel="manifest" href="/images/manifest.json">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"luochengyuan.top","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":6},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+
+
+  <meta name="description" content="废话篇近日，最终不堪微软输入法的折磨，还是下载了搜狗输入法，但是下载后却并没有如网上所说的那样“广告遍地走”，看着还…挺干净的，而且它的词库是真的多啊！直接甩微软一个恒星纪元。但是他这个皮肤实在是有点丑，还不如微软的彩色渐变，于是就去它“更换皮肤”里面找嘛。不找还不知道，这一找之下，我真是好家伙了，一整页几乎全是付费  已经不抱任何希望的尝试着搜了下“布洛妮娅”——出乎意料，竟然是“没有找到任何结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搜狗输入法自制皮肤">
+<meta property="og:url" content="http://luochengyuan.top/2024/04/07/2024-04-07-technology/index.html">
+<meta property="og:site_name" content="枫予蝉のBlog">
+<meta property="og:description" content="废话篇近日，最终不堪微软输入法的折磨，还是下载了搜狗输入法，但是下载后却并没有如网上所说的那样“广告遍地走”，看着还…挺干净的，而且它的词库是真的多啊！直接甩微软一个恒星纪元。但是他这个皮肤实在是有点丑，还不如微软的彩色渐变，于是就去它“更换皮肤”里面找嘛。不找还不知道，这一找之下，我真是好家伙了，一整页几乎全是付费  已经不抱任何希望的尝试着搜了下“布洛妮娅”——出乎意料，竟然是“没有找到任何结">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407150424788.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407150536197.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407150654078.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407151147790.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407151158004.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407151440093.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407151656192.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407153916714.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407154013599.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407154117582.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407154314678.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407155211073.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407161230803.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407161329394.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407155503221.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407160021074.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407160238871.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407160806901.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407160909611.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407161020134.png">
+<meta property="article:published_time" content="2024-04-06T16:00:00.000Z">
+<meta property="article:author" content="一潦西流水">
+<meta property="article:tag" content="记录">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407150424788.png">
+
+<link rel="canonical" href="http://luochengyuan.top/2024/04/07/2024-04-07-technology/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>搜狗输入法自制皮肤 | 枫予蝉のBlog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+  
+  <meta name="baidu-site-verification" content="codeva-zpkecEJF0J" />
+  
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?18a89e523655d873cdab746e5ef70faf";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+<!--浏览器搞笑标题-->
+<script type="text/javascript" src="\js\FunnyTitle.js"></script>
+
+<!--人体时钟背景透明-->
+<script charset="Shift_JIS" src="http://chabudai.sakura.ne.jp/blogparts/honehoneclock/honehone_clock_tr.js"></script>
+
+<!-- 雪花特效 -->
+<script type="text/javascript" src="\js\snow.js"></script>
+
+
+  
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">枫予蝉のBlog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description"> </p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://luochengyuan.top/2024/04/07/2024-04-07-technology/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/karl18151/Blog-img@main/20240105/1c8672a7dc2c7.acwectudj6w.jpg">
+      <meta itemprop="name" content="一潦西流水">
+      <meta itemprop="description" content="嶶 笶 偝 後 Dê 傷 冇 誰 朙 苩">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="枫予蝉のBlog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          搜狗输入法自制皮肤
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-04-07 00:00:00" itemprop="dateCreated datePublished" datetime="2024-04-07T00:00:00+08:00">2024-04-07</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="废话篇"><a href="#废话篇" class="headerlink" title="废话篇"></a>废话篇</h1><p>近日，最终不堪微软输入法的折磨，还是下载了搜狗输入法，但是下载后却并没有如网上所说的那样“广告遍地走”，看着还…挺干净的，而且它的词库是真的多啊！直接甩微软一个恒星纪元。但是他这个皮肤实在是有点丑，还不如微软的彩色渐变，于是就去它“更换皮肤”里面找嘛。不找还不知道，这一找之下，我真是好家伙了，一整页几乎全是付费</p>
+<p><img src="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407150424788.png" alt="image-20240407150424788"></p>
+<p>已经不抱任何希望的尝试着搜了下“布洛妮娅”——出乎意料，竟然是“没有找到任何结果”，我都好不容易才提起的掏元子的决心，竟然没有使用的机会QAQ。话说这个搜狗的UI确实是上了年代了啊哈哈哈</p>
+<p><img src="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407150536197.png" alt="image-20240407150536197"></p>
+<p>于是，我就想着能不能自己制作一款皮肤，然后就被我找到了这个。这就是搜狗对用户开放的用来制作皮肤的软件，我大为欣喜，直接开搞</p>
+<p><img src="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407150654078.png" alt="image-20240407150654078"></p>
+<p>打开看了一下，自由度那是相当高呀，就是这上了年代的东西难免会有亿些卡顿</p>
+<h1 id="操作区解释"><a href="#操作区解释" class="headerlink" title="操作区解释"></a>操作区解释</h1><p>可以看到搜狗输入法的皮肤，往白了说，其实就是贴图。所以只要能够找到优美华丽的图片，基本就制作完成了，easy</p>
+<p>并且他是支持.gif文件的，也就是动态皮肤也是可以被制作的，但是咱对动态皮肤没啥感觉，还是以静态为演示吧</p>
+<p><img src="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407151147790.png" alt="image-20240407151147790"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407151158004.png" alt="image-20240407151158004"></p>
+<p>而且这里有五个窗口（也就是背景图片）设置，制作前先来解释一下</p>
+<p><img src="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407151440093.png" alt="image-20240407151440093"></p>
+<ol>
+<li><p>横排合窗口样式</p>
+<p>正如图片右侧所展示的，就是候选字是分列展示，这也应该是我们最常用的样式了吧</p>
+<p><img src="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407151656192.png" alt="image-20240407151656192"></p>
+</li>
+<li><p>横排分窗口样式</p>
+<p>同上，也是横排展示候选词，只不过所谓分窗口就是把拼音和候选词分开了。分窗口的话就可以做到使用两张图片，拼音一张、候选词一张，极大的提高了可玩性，譬如这样，非常有意思：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407153916714.png" alt="image-20240407153916714"></p>
+</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407154013599.png" alt="image-20240407154013599"></p>
+<ol start="3">
+<li><p>竖排合窗口</p>
+<p>直接一张图片解释，很直观，它的候选区是分行展示的</p>
+<p><img src="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407154117582.png" alt="image-20240407154117582"></p>
+</li>
+<li><p>竖排分窗口</p>
+<p>不难猜到</p>
+</li>
+<li><p>状态栏</p>
+<p>就是右下角那个</p>
+<p><img src="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407154314678.png" alt="image-20240407154314678"></p>
+<p>其他的，这里以横排合窗口解释：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407155211073.png" alt="image-20240407155211073"></p>
+<h1 id="贴图制作"><a href="#贴图制作" class="headerlink" title="贴图制作"></a>贴图制作</h1><p>话不多说，先上最终效果</p>
+<p>这是状态栏</p>
+<p><img src="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407161230803.png" alt="image-20240407161230803"></p>
+<p>这是候选框</p>
+<p><img src="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407161329394.png" alt="image-20240407161329394"></p>
+<h2 id="状态栏贴图制作"><a href="#状态栏贴图制作" class="headerlink" title="状态栏贴图制作"></a>状态栏贴图制作</h2><p>打开心爱的PS，挑选一张喜欢的图片开始抠图</p>
+<p><img src="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407155503221.png" alt="image-20240407155503221"></p>
+<p>鉴于魔棒对于大部分图片都无法解决，建议直接上钢笔</p>
+<p>for a bit</p>
+<p><img src="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407160021074.png" alt="image-20240407160021074"></p>
+<p>抠出来之后，在下面用矩形工具画一个圆角矩形，这其实就是用来放功能按钮的区域，随便什么形状都可以，咱这里用矩形</p>
+<p><img src="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407160238871.png" alt="image-20240407160238871"></p>
+<p>将大小改为300*300px（等比例缩放，宽度为300就行，高度随意，100000000000000000000都没问题，只要你的电脑屏幕够大），导出为png，大功告成</p>
+<h2 id="状态栏按钮制作"><a href="#状态栏按钮制作" class="headerlink" title="状态栏按钮制作"></a>状态栏按钮制作</h2><p>这里推荐推荐一个网站<a target="_blank" rel="noopener" href="https://iconoir.com/">Iconoir</a>，里面有大量的矢量图片可供选择，随便挑两张，下载下来。打开ps栅格化图片，改一下大小，导出为png（注意：网站是svg格式，皮肤制作软件无法接受svg格式的图片，上文有提）</p>
+<h2 id="横排合窗口贴图制作"><a href="#横排合窗口贴图制作" class="headerlink" title="横排合窗口贴图制作"></a>横排合窗口贴图制作</h2><p>找到一张喜欢的图片，因为咱这张图片左侧刚好是一片空白区域，所以只要拉伸一下就行，不做其他处理</p>
+<p><img src="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407160806901.png" alt="image-20240407160806901"></p>
+<p>用剪裁工具拉出一点距离</p>
+<p><img src="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407160909611.png" alt="image-20240407160909611"></p>
+<p>选区-编辑-内容识别填充</p>
+<p><img src="https://cdn.jsdelivr.net/gh/karl18151/Blog-img/image-20240407161020134.png" alt="image-20240407161020134"></p>
+<p>修改一下大小，完成</p>
+<h2 id="其他贴图同上"><a href="#其他贴图同上" class="headerlink" title="其他贴图同上"></a>其他贴图同上</h2><h1 id="制作"><a href="#制作" class="headerlink" title="制作"></a>制作</h1><p>进入那个软件（<a target="_blank" rel="noopener" href="https://pinyin.sogou.com/skins/design.html?f=ac_index">官网在这儿</a>）</p>
+<p>根据上文“操作区解释”，导入图片，微调，完成</p>
+<p>ps：别问为什么最后这么短——“是牛马人，确信。但绝不加班！！”</p>
+</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>一潦西流水
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://luochengyuan.top/2024/04/07/2024-04-07-technology/" title="搜狗输入法自制皮肤">http://luochengyuan.top/2024/04/07/2024-04-07-technology/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%AE%B0%E5%BD%95/" rel="tag"># 记录</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2024/03/25/2024-03-25-technology/" rel="prev" title="懒人福音？不！是摸鱼核心装：影刀">
+      <i class="fa fa-chevron-left"></i> 懒人福音？不！是摸鱼核心装：影刀
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2024/04/17/2024-04-17-life/" rel="next" title="土木工程\_实习总结\_3644字">
+      土木工程\_实习总结\_3644字 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+  
+
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%9F%E8%AF%9D%E7%AF%87"><span class="nav-number">1.</span> <span class="nav-text">废话篇</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E5%8C%BA%E8%A7%A3%E9%87%8A"><span class="nav-number">2.</span> <span class="nav-text">操作区解释</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B4%B4%E5%9B%BE%E5%88%B6%E4%BD%9C"><span class="nav-number">3.</span> <span class="nav-text">贴图制作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8A%B6%E6%80%81%E6%A0%8F%E8%B4%B4%E5%9B%BE%E5%88%B6%E4%BD%9C"><span class="nav-number">3.1.</span> <span class="nav-text">状态栏贴图制作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8A%B6%E6%80%81%E6%A0%8F%E6%8C%89%E9%92%AE%E5%88%B6%E4%BD%9C"><span class="nav-number">3.2.</span> <span class="nav-text">状态栏按钮制作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%AA%E6%8E%92%E5%90%88%E7%AA%97%E5%8F%A3%E8%B4%B4%E5%9B%BE%E5%88%B6%E4%BD%9C"><span class="nav-number">3.3.</span> <span class="nav-text">横排合窗口贴图制作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E8%B4%B4%E5%9B%BE%E5%90%8C%E4%B8%8A"><span class="nav-number">3.4.</span> <span class="nav-text">其他贴图同上</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%B6%E4%BD%9C"><span class="nav-number">4.</span> <span class="nav-text">制作</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="一潦西流水"
+      src="https://cdn.jsdelivr.net/gh/karl18151/Blog-img@main/20240105/1c8672a7dc2c7.acwectudj6w.jpg">
+  <p class="site-author-name" itemprop="name">一潦西流水</p>
+  <div class="site-description" itemprop="description">嶶 笶 偝 後 Dê 傷 冇 誰 朙 苩</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">50</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="sidebar-button motion-element"><i class="fa fa-comment"></i>
+    Chat
+  </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/karl18151" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;karl18151" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:aptx4568@163.com" title="E-Mail → mailto:aptx4568@163.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://picx.xpoet.cn/#/upload" title="https:&#x2F;&#x2F;picx.xpoet.cn&#x2F;#&#x2F;upload" rel="noopener" target="_blank">图床</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://luochengyuan.top/love/" title="http:&#x2F;&#x2F;luochengyuan.top&#x2F;love&#x2F;">LOVE</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://luochengyuan.top/Smash-The-Walls/" title="http:&#x2F;&#x2F;luochengyuan.top&#x2F;Smash-The-Walls&#x2F;">Smash-The-Walls</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://luochengyuan.top/fireworks/" title="http:&#x2F;&#x2F;luochengyuan.top&#x2F;fireworks&#x2F;">放烟花</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://luochengyuan.top/zqj/" title="http:&#x2F;&#x2F;luochengyuan.top&#x2F;zqj&#x2F;">中秋节</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://luochengyuan.top/component.github.io/" title="http:&#x2F;&#x2F;luochengyuan.top&#x2F;component.github.io&#x2F;">政治光谱测试</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2023-05 – 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">一潦西流水</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">69k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">1:03</span>
+</div>
+
+<!--
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+-->
+
+
+        
+<div class="busuanzi-count">
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+
+    </div>
+  
+      <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
+    <script src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+    <script src="/js/cursor/explosion.min.js"></script>
+
+  
+  <script src="https://myhkw.cn/api/player/169476436377" id="myhk" key="169476436377" m="1"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
